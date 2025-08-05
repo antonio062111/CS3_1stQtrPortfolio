@@ -1,0 +1,10 @@
+//no script tag needed here
+
+
+
+let maxAge = 90
+let age = 14
+let numPerDay = 2
+let totalRequired = (numPerDay * 365) * (maxAge - age) 
+
+document.write("You will need " + totalRequired + " snacks to last you until the ripe old age of " + maxAge)
