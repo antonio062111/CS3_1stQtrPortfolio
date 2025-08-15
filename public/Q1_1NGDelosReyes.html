@@ -4,28 +4,30 @@
   </head>
 
   <h1>Feed Me My Snacks</h1>
+    <label for="Age">Age: </label>
+    <input type="text" id="age" name="Age"><br><br>
 
-    <label for="lage">Age: </label>
-    <input type="text" id="lage" name="lage"><br><br>
+    <label for="maxAge">Max Age: </label>
+    <input type="text" id="MaxAge" name="maxAge"><br><br>
 
-    <label for="lmaxAge">Max Age: </label>
-    <input type="text" id="lmaxAge" name="lmaxAge"><br><br>
+    <label for="numPerDay">Snacks Per Day: </label>
+    <input type="text" id="NumPerDay" name="numPerDay"><br><br>
 
-    <label for="lnumPerDay">Snacks Per Day: </label>
-    <input type="text" id="lnumPerDay" name="lnumPerDay"><br><br>
-
-    <button type="button">Submit</button> 
+    <p id="result"> Result:</p>
+    <button onclick="getData()">Accept Input</button> 
   
-  
-  <p>Result</p>
-  
-
-
-    <script src = "script.js">
-
-
 
   <script>
+function getData(){
+  let AGE = age.value;
+  let MAXAGE = document.getElementById("MaxAge").value;
+  let NUMPERDAY= document.getElementById("NumPerDay").value;
+alert("Are you sure??");
 
-  
+let totalRequired = (NUMPERDAY * 365) * (MAXAGE - AGE);
+result.innerHTML = "Result: You will need " + totalRequired + " snacks to last you until the ripe old age of " + MAXAGE;
+
+}
+
+</script>
   <body>
